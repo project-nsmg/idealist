@@ -1,14 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-  <div class="jumbotron">
-    <h1>Welcome to idealist</h1>
-    <p>Time to start building your site!</p>
-    <p><a class="btn btn-primary btn-lg" href="http://luminusweb.net">Learn more &raquo;</a></p>
-  </div>
+<h1>Welcome to Idea List at Nsmg</h1>
+<p>This is a collection of ideas for developers to work on. It's under heavy development. </p>
+<p><a class="btn btn-primary btn-lg" href="/about">Learn more &raquo;</a></p>
 
-  <div class="row-fluid">
-    <div class="span9">
-    {{content|safe}}
-    </div>
-  </div>
+<hr>
+
+<ul>
+    {% for item in ideas %}
+    <li>{{ item.description }}</li>
+    {% endfor %}
+</ul>
+
+<form action="/" method="POST">
+    <p>
+       Description:
+       <textarea rows="4" cols="50" name="description"></textarea>
+    </p>
+    <input type="submit" value="add!">
+</form>
+
 {% endblock %}

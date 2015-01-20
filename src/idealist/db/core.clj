@@ -20,3 +20,16 @@
 
 (defn get-user [id]
   (mc/find-one-as-map db "users" {:id id}))
+
+(defn create-idea [idea]
+  (mc/insert db "ideas" idea))
+
+(defn update-idea [id description]
+  (mc/update db "ideas" {:id id}
+             {$set {:content description}}))
+
+(defn get-idea [id]
+  (mc/find-one-as-map db "ideas" {:id id}))
+
+(defn all-ideas []
+  (mc/find-maps db "ideas"))
