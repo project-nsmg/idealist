@@ -1,0 +1,161 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700);
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 1em auto 4em auto;
+    position: relative;
+    tab-size: 2;
+    max-width: 960px;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 300;
+    letter-spacing: -2px;
+    margin: .3em 0 .1em 0;
+}
+
+.title {
+    margin-top: .8em;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 2em;
+}
+
+h2::before {
+    content: "\A";
+    width: .7em;
+    height: .7em;
+    border-radius: 50%;
+    background: #b83b3b;
+    display: inline-block;
+    margin-left: -1.7em;
+    margin-right: 1em;
+}
+
+h1, h2 {
+    text-rendering: optimizeLegibility;
+    max-width: 720px;
+}
+
+h2 a {
+    color: #ccc;
+    left: -20px;
+    position: absolute;
+    width: 740px;
+}
+
+.date {
+    color: #aaa;
+    margin-left: 1em;
+}
+
+footer {
+    margin-top: 8em;
+}
+
+aside {
+    font-size: small;
+    left: 780px;
+    position: absolute;
+    text-align: right;
+    width: 180px;
+}
+
+p {
+    line-height: 1.5em;
+    max-width: 720px;
+}
+
+blockquote {
+    max-width: 640px;
+}
+
+li {
+    max-width: 680px;
+}
+
+a {
+    color: steelblue;
+}
+
+a:not(:hover) {
+    text-decoration: none;
+}
+
+pre, code {
+    font-family: "Ubuntu Mono", monospace;
+    line-height: normal;
+}
+
+textarea {
+    border: 0px;
+    display: inline;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    padding: 0px;
+    resize: none;
+}
+
+pre {
+    border-left: solid 2px #ccc;
+    padding-left: 18px;
+    margin: 2em 0 2em -20px;
+    width: 960px;
+    overflow-x: auto;
+}
+
+.html .value,
+.javascript .string,
+.javascript .regexp {
+    color: #756bb1;
+}
+
+.html .tag,
+.css .tag,
+.javascript .keyword {
+    color: #3182bd;
+}
+
+aside,
+.comment {
+    color: #636363;
+}
+
+.html .doctype,
+.javascript .number {
+    color: #31a354;
+}
+
+.html .attribute,
+.css .attribute,
+.javascript .class,
+.javascript .special {
+    color: #e6550d;
+}
+
+iframe {
+    width: 960px;
+    height: 500px;
+    border: 1px solid #DEDEDE;
+}
+
+input[type=submit] {
+    font-family: 'Open Sans', sans-serif;
+    padding: .3em;
+    min-width: 8em;
+    background-color: #b83b3b;
+    border: 0px;
+    border-radius: 3px;
+    float: right;
+    color: #FFF;
+    text-transform: uppercase;
+}

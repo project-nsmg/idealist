@@ -1,23 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Welcome to Idea List at Nsmg</h1>
-<p>This is a collection of ideas for developers to work on. It's under heavy development. </p>
-<p><a class="btn btn-primary btn-lg" href="/about">Learn more &raquo;</a></p>
+<h1 class="title">Idealist at Project Nsmg</h1>
+<p>This is a collection of ideas for developers to work on. The idea list itself is under heavy development. So use it with caution. <a class="btn btn-primary btn-lg" href="/about">Learn more &raquo;</a></p>
 
-<hr>
+{% for item in ideas %}
+<h2>{{ item.description }}</h2>
+{% endfor %}
 
-<ul>
-    {% for item in ideas %}
-    <li>{{ item.description }}</li>
-    {% endfor %}
-</ul>
-
-<form action="/" method="POST">
-    <p>
-       Description:
-       <textarea rows="4" cols="50" name="description"></textarea>
-    </p>
-    <input type="submit" value="add!">
+<form class="newidea" action="/" method="POST">
+    <h2><textarea class="description" rows="1"  name="description" placeholder="New Idea Description"></textarea></h2>
+    <p><input type="submit" value="add"></p>
 </form>
 
+<footer>
+    <aside>January 21, 2015</aside>
+    <a href="http://ns.mg">Project Nsmg</a>
+</footer>
+
+{% endblock %}
+
+{% block page-scripts %}
+<script src="/vendor/jquery.autosize.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
 {% endblock %}
