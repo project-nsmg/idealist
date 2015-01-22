@@ -4,13 +4,29 @@
 <p>This is a collection of ideas for developers to work on. The idea list itself is under heavy development. So use it with caution. <a class="btn btn-primary btn-lg" href="/about">Learn more &raquo;</a></p>
 
 {% for item in ideas %}
-<h2>{{ item.description }}</h2>
+<div class="idea">
+    <div class="show">
+        <h2 class="description">{{ item.description }}</h2>
+        <a class="editButton" href="#"><i class="fa fa-edit fa-lg"></i></a>
+    </div>
+    <div class="edit">
+        <form action="/" method="POST">
+            <h2><textarea class="description" rows="1" name="description">{{ item.description }}</textarea></h2>
+        </form>
+        <a class="saveButton" href="#"><i class="fa fa-floppy-o fa-lg"></i></a>
+        <a class="deleteButton" href="#"><i class="fa fa-remove fa-lg"></i></a>
+    </div>
+</div>
 {% endfor %}
 
-<form class="newidea" action="/" method="POST">
-    <h2><textarea class="description" rows="1"  name="description" placeholder="New Idea Description"></textarea></h2>
-    <p><input type="submit" value="add"></p>
-</form>
+<div class="idea newidea">
+    <div class="edit">
+        <form action="/" method="POST">
+            <h2><textarea class="description" rows="1" name="description" placeholder="New Idea Description"></textarea></h2>
+        </form>
+        <a class="saveButton" href="#"><i class="fa fa-floppy-o fa-lg"></i></a>
+    </div>
+</div>
 
 <footer>
     <aside>January 21, 2015</aside>

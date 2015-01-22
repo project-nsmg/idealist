@@ -1,12 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700);
+@import url(/vendor/font-awesome.min.css);
 
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 1em auto 4em auto;
     position: relative;
     tab-size: 2;
-    max-width: 960px;
+    max-width: 720px;
 }
 
 h1 {
@@ -24,6 +25,11 @@ h2 {
     font-size: 24px;
     font-weight: 400;
     margin-top: 2em;
+    min-height: 49px;
+}
+
+.active {
+    background-color: #EDE240;
 }
 
 h2::before {
@@ -94,6 +100,7 @@ pre, code {
 
 textarea {
     border: 0px;
+    margin: 0px;
     display: inline;
     font-size: 24px;
     font-weight: 400;
@@ -158,4 +165,33 @@ input[type=submit] {
     float: right;
     color: #FFF;
     text-transform: uppercase;
+}
+
+.idea .edit {
+    display: none;
+}
+
+.idea {
+    position: relative;
+}
+
+.edit > .saveButton {
+    display: none;
+    position: absolute;
+    right: -1em;
+    top: .2em;
+}
+
+.edit > .deleteButton {
+    display: none;
+    position: absolute;
+    right: -1em;
+    top: 2em;
+}
+
+.show > .editButton {
+    display: none;
+    position: absolute;
+    right: -1em;
+    top: .2em;
 }
